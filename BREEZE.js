@@ -1,5 +1,3 @@
-// Given the CSV file is in the project's "assets" folder:
-
 let table;
 let row;
 let r = 0;
@@ -13,22 +11,21 @@ let green;
 let x = 0;
 let scaled_blue = 255;
 let autoPlay = false;
-//var INClight, fontReady = false;
-//var INCregular, fontReady = false;
-//var INCblack, fontReady = false;
-//var INC_LGCitalic, fontReady = false;
+var INClight, fontReady = false;
+var INCregular, fontReady = false;
+var INCblack, fontReady = false;
+var INC_LGCitalic, fontReady = false;
 
-//function fontRead(){
-//  fontReady = true;
-//}
+function fontRead(){
+  fontReady = true;
+}
 
 function preload() {
-  //and has no header specifying the columns labels
   table = loadTable("assets/breeze_data_gs.csv", "csv", "noHeader");
-  //INClight = loadFont('assets/Inconsolata-light.ttf', fontRead);
-  //INCregular = loadFont('assets/Inconsolata-Regular.ttf', fontRead);
-  //INCblack = loadFont('assets/Inconsolata-Black.ttf', fontRead);
-  //INC_LGCitalic = loadFont ('assets/Inconsolata-LGC-Italic.otf', fontRead);
+  INClight = loadFont('assets/Inconsolata-light.ttf', fontRead);
+  INCregular = loadFont('assets/Inconsolata-Regular.ttf', fontRead);
+  INCblack = loadFont('assets/Inconsolata-Black.ttf', fontRead);
+  INC_LGCitalic = loadFont ('assets/Inconsolata-LGC-Italic.otf', fontRead);
 }
 
 function setup() {
@@ -86,7 +83,7 @@ function draw() {
    fill (225);
  }
   textSize(14);
-  //textFont(INCregular);
+  textFont(INCregular);
   text("time: " + time, 80, 40);
   text("intensity x: " + round(intensity_x), 80, 70);
   text("intensity y: " + round(intensity_y), 80, 88);
@@ -105,10 +102,10 @@ function draw() {
   text("37° 45' 38.0556'' N", 300, 74);
   text("122° 25' 51.8448'' W", 300, 86);
   textSize(10);
-  //textFont(INCblack);
+  textFont(INCblack);
   text("FELIX FEIN 2020", width - 50, 20);
   textSize(30);
- // textFont(INC_LGCitalic);
+  textFont(INC_LGCitalic);
   text("BREEZE", 300, 55);
   fill(150);
   ellipse(532, 573, 30, 30); //play button
@@ -126,7 +123,7 @@ function draw() {
   fill(0);
   textStyle(NORMAL);
   textSize(10);
- // textFont(INClight);
+  textFont(INClight);
   text("PLAY", 532, 576);
   text("STOP", 572, 576);
   text("14:05", 26, 576);
@@ -143,7 +140,7 @@ function draw() {
   stroke(255);
 
   //use cosine to get a smooth CW and CCW motion when not jittering
-  let c = (cos(scaled_sensorx) / (scaled_sensorx * 3));
+  //let c = (cos(scaled_sensorx) / (scaled_sensorx * 3));
   //move the shape to the center of the canvas
   translate(width / 2, height / 2);
   //apply the final rotation
