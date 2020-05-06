@@ -25,7 +25,7 @@ function preload() {
   INClight = loadFont('assets/Inconsolata-light.ttf', fontRead);
   INCregular = loadFont('assets/Inconsolata-Regular.ttf', fontRead);
   INCblack = loadFont('assets/Inconsolata-Black.ttf', fontRead);
-  INC_LGCitalic = loadFont ('assets/Inconsolata-LGC-Italic.otf', fontRead);
+  INC_LGCitalic = loadFont('assets/Inconsolata-LGC-Italic.otf', fontRead);
 }
 
 function setup() {
