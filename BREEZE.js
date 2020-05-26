@@ -22,7 +22,7 @@ function fontRead(){
 
 function preload() {
   table = loadTable("assets/breeze_data_gs.csv", "csv", "noHeader");
-  INClight = loadFont('assets/Inconsolata-light.ttf', fontRead);
+  INClight = loadFont('assets/Inconsolata-Light.ttf', fontRead);
   INCregular = loadFont('assets/Inconsolata-Regular.ttf', fontRead);
   INCblack = loadFont('assets/Inconsolata-Black.ttf', fontRead);
   INC_LGCitalic = loadFont('assets/Inconsolata-LGC-Italic.otf', fontRead);
